@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+
 <h1>{{  nama_aplikasi  }}</h1>
 
 <h5>NPM: </h5>
@@ -9,11 +12,29 @@
 <h5>Class:</h5>
 <p>{{ kelas }}</p>
 
-<a href="{% url 'main:create_product' %}">
-<button>+ Add </button>
+<hr>
+
+<h3>Welcome, {{ current_user }}!</h3>
+<h5>Sesi terakhir login: {{ last_login }}</h5>
+
+<a href="{% url 'main:logout' %}">
+  <button>Logout</button>
 </a>
 
 <hr>
+
+<a href="?filter=all">
+    <button type="button">All Products</button>
+</a>
+<a href="?filter=my">
+    <button type="button">My Products</button>
+</a> 
+
+<hr>
+
+<a href="{% url 'main:create_product' %}">
+  <button>+ Add</button>
+</a>
 
 {% if not product_list %}
 <p>Belum ada produk terdaftar pada football shop.</p>
@@ -45,3 +66,5 @@
 {% endfor %}
 
 {% endif %}
+
+{% endblock content %}

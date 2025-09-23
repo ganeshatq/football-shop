@@ -1,6 +1,8 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Product(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     CATEGORY_CHOICES = [('fitness', 'Fitness Equipment'), ('outdoor', 'Outdoor & Camping'), ('swimming', 'Swimming Gear'), ('badminton', 'Badminton Equipment'), ('basketball', 'Basketball Gear'), ('cycling', 'Cycling'), ('yoga', 'Yoga & Pilates'), ('running', 'Running Shoes & Apparel'), ('sportswear', 'Sportswear'), ('supplements', 'Supplements & Nutrition')]
     
     name = models.CharField(max_length=255)
