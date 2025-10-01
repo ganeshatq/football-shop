@@ -145,3 +145,59 @@ Agar setiap produk dapat dimiliki oleh seorang pengguna (penjual), saya memodifi
 d. Membuat Data Uji Coba
 
 Untuk menguji fungsionalitas aplikasi, saya membuat dua akun pengguna yang berbeda melalui halaman registrasi. Setelah login dengan akun pertama, saya menambahkan tiga data produk. Kemudian, saya logout dan login dengan akun kedua, lalu menambahkan tiga produk lainnya. Proses ini memastikan bahwa setiap produk terhubung dengan benar ke pengguna yang membuatnya dan fitur filter produk berfungsi sebagaimana mestinya.
+
+
+
+Tugas 5
+
+#### **1. Prioritas Selector CSS (Spesifisitas)**
+
+Urutan kekuatan selector CSS dalam menentukan gaya (style) sebuah elemen, dari yang paling prioritas hingga yang paling rendah, adalah sebagai berikut:
+
+1.  **Inline Styles**: Atribut `style` yang ditulis langsung pada elemen HTML (contoh: `style="color: pink;"`).
+2.  **ID Selectors**: Selector yang menargetkan ID unik sebuah elemen (contoh: `#navbar`).
+3.  **Classes, Attribute Selectors, dan Pseudo-classes**: Termasuk selector kelas (contoh: `.test`), selector berdasarkan atribut (contoh: `[type="text"]`), dan status elemen (contoh: `:hover`).
+4.  **Elements dan Pseudo-elements**: Selector yang menargetkan nama tag HTML (contoh: `h1`) dan elemen semu (contoh: `::before`, `::after`).
+5.  **Universal Selector dan `:where()`**: Selector yang menargetkan semua elemen (contoh: `*`) atau selector dengan spesifisitas nol (contoh: `:where()`).
+
+#### **2. Desain Responsif (Responsive Design)**
+
+Desain responsif adalah sebuah pendekatan dalam pengembangan web yang memastikan tampilan situs dapat beradaptasi secara optimal di berbagai ukuran layar, mulai dari desktop, tablet, hingga smartphone. Konsep ini sangat penting karena pengguna modern mengakses web dari beragam perangkat. Tanpa desain yang responsif, pengalaman pengguna (UX) dapat menjadi buruk dan tidak konsisten.
+
+  * **Contoh Aplikasi Responsif**: Instagram, Tokopedia.
+
+#### **3. Konsep Box Model CSS**
+
+Setiap elemen HTML dapat dianggap sebagai sebuah "kotak" yang terdiri dari empat lapisan utama:
+
+  * **Margin**: Area transparan di bagian terluar yang menciptakan ruang antara elemen ini dengan elemen lainnya.
+  * **Border**: Garis yang mengelilingi padding dan konten. Posisinya berada di antara margin dan padding.
+  * **Padding**: Area transparan di sekitar konten yang memberikan ruang di dalam border. Posisinya berada di antara konten dan border.
+  * **Content**: Isi dari elemen itu sendiri, seperti teks, gambar, atau video.
+
+**Contoh Implementasi:**
+
+```css
+div {
+    margin: 20px;       /* Ruang 20px di luar border */
+    border: 15px solid green; /* Garis hijau setebal 15px */
+    padding: 50px;      /* Ruang 50px di dalam border */
+}
+```
+
+#### **4. Perbandingan Layout: Flexbox vs. Grid**
+
+  * **Flexbox**: Menyediakan sistem tata letak (layout) **satu dimensi** untuk mengatur item dalam sebuah baris (row) atau kolom (column). Sangat cocok digunakan untuk komponen seperti *navbar*, header, atau footer.
+  * **Grid**: Menyediakan sistem tata letak **dua dimensi** (baris dan kolom sekaligus) untuk mengatur konten dalam format seperti tabel. Sangat ideal untuk layout halaman yang kompleks seperti *dashboard* atau galeri foto.
+
+#### **5. Langkah-Langkah Implementasi pada Proyek**
+
+Berikut adalah alur kerja yang telah dilakukan untuk mengimplementasikan fitur dan styling pada aplikasi:
+
+1.  **Integrasi Tailwind CSS**: Menambahkan Tailwind ke dalam proyek dengan menyisipkan script CDN pada file `base.html`.
+2.  **Pembuatan Fungsi Views**: Membuat fungsi `edit_products` dan `delete_products` di dalam file `views.py` untuk menangani logika bisnis.
+3.  **Konfigurasi URL**: Mendaftarkan fungsi `edit_products` dan `delete_products` ke dalam `urls.py` dan menambahkan path URL yang sesuai ke dalam `urlpatterns`.
+4.  **Menghubungkan ke Template**: Mengintegrasikan fungsionalitas edit dan hapus ke dalam template `main.html` agar dapat diakses oleh pengguna.
+5.  **Penambahan Komponen**: Membuat template untuk komponen *navbar* dan memasukkannya ke dalam struktur aplikasi.
+6.  **Konfigurasi Static Files**: Mengatur pengelolaan file statis (seperti CSS, JavaScript, dan gambar) pada aplikasi.
+7.  **Styling**: Melakukan penataan visual pada seluruh aplikasi dengan menggunakan *utility classes* dari Tailwind dan beberapa kustomisasi melalui file CSS eksternal.
