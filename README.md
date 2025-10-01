@@ -32,11 +32,8 @@ Sistem migrasi database di Django bekerja sebagai alat untuk mengelola perubahan
 Django sering dianggap sebagai framework yang ideal untuk pemula karena filosofinya yang "sudah termasuk baterai" (batteries-included) dan strukturnya yang terorganisir. Pendekatan ini menyediakan hampir semua komponen penting secara bawaan—seperti panel admin, ORM untuk interaksi database, dan sistem autentikasi—sehingga pemula bisa langsung fokus membangun fitur tanpa harus merakit banyak komponen terpisah. Ditambah dengan pola arsitektur Model-View-Template (MVT) yang jelas, dokumentasi yang sangat baik, serta fitur keamanan bawaan yang kuat, Django menawarkan jalur pembelajaran yang terstruktur dan mengajarkan praktik pengembangan perangkat lunak yang baik sejak awal.
 
 - Feedback untuk Asisten Dosen Tutorial 1
-...
 
 Tugas 3
-
-Tentu, ini adalah versi teks yang sudah rapi dan siap untuk Anda salin.
 
 Pentingnya Data Delivery dalam Implementasi Platform
 
