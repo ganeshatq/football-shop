@@ -198,3 +198,33 @@ Berikut adalah alur kerja yang telah dilakukan untuk mengimplementasikan fitur d
 5.  **Penambahan Komponen**: Membuat template untuk komponen *navbar* dan memasukkannya ke dalam struktur aplikasi.
 6.  **Konfigurasi Static Files**: Mengatur pengelolaan file statis (seperti CSS, JavaScript, dan gambar) pada aplikasi.
 7.  **Styling**: Melakukan penataan visual pada seluruh aplikasi dengan menggunakan *utility classes* dari Tailwind dan beberapa kustomisasi melalui file CSS eksternal.
+
+# Tugas Individu 6
+
+Pada **synchronous request**, browser mengirim permintaan lalu **menunggu** respons server sebelum bisa lanjut. Halaman biasanya **reload** atau berhenti sementara.
+Pada **asynchronous request (AJAX)**, permintaan dikirim **tanpa menghentikan** aktivitas halaman. Browser tetap bisa dipakai, dan saat respons datang, **bagian tertentu** halaman diperbarui **tanpa reload penuh**.
+
+## Alur kerja AJAX di Django
+
+1. Pengguna melakukan aksi di browser (contoh: klik tombol **“Add Product”**).
+2. JavaScript mengirim request AJAX ke endpoint Django (mis. lewat **fetch()**).
+3. Django menerima request (sering memakai **@csrf_exempt** untuk endpoint khusus).
+4. View memproses data lalu mengembalikan **JSONResponse**.
+5. JavaScript menerima data JSON dari server.
+6. Tampilan halaman diperbarui secara dinamis **tanpa reload**.
+
+## Kenapa pakai AJAX?
+
+1. **Lebih responsif & real-time** karena tidak perlu muat ulang halaman.
+2. **Beban server berkurang**, sebab Django tidak harus mengirim seluruh HTML.
+3. **Fleksibel**, mudah dipakai untuk berbagai fitur interaktif.
+
+## Keamanan login/register dengan AJAX di Django
+
+* Gunakan **CSRF token** supaya tidak rentan terhadap **CSRF attack**.
+* Lakukan **validasi input di server** agar hasil tetap aman dari manipulasi data.
+
+## Dampak ke pengalaman pengguna
+
+AJAX membuat aplikasi terasa **cepat**, interaksi **real-time**, dan navigasi **lebih mulus** tanpa jeda reload halaman.
+>>>>>>> 25d4afd (Tutorial 6)
